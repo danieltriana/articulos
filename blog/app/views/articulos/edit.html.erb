@@ -1,14 +1,12 @@
-<h1>
-  Nuevo Articulo
-</h1>
-
-<%= form_for :articulo, url: articulos_path do |f| %>
+<h1>Editando un artículo</h1>
+ 
+<%= form_for :articulo, url: articulo_path(@articulo), method: :patch do |f| %>
  
   <% if @articulo.errors.any? %>
     <div id="error_explanation">
-      <h2>
+    <h2>
         <%= pluralize(@articulo.errors.count, "error") %> han impedido que el artículo sea grabado:
-      </h2>
+    </h2>
       <ul>
         <% @articulo.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
@@ -28,7 +26,7 @@
   </p>
  
   <p>
-    <%= f.submit 'Guardar Comentario' %>
+    <%= f.submit 'Guardar Artículo' %>
   </p>
  
 <% end %>

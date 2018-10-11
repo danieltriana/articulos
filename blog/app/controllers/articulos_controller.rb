@@ -1,16 +1,23 @@
 class ArticulosController < ApplicationController
+  def index
+    @articulos = Articulo.all
+  end
   def show
     @articulo=Articulo.find(params[:id])
   end
   def new
+    @articulo=Articulo.new
   end
   
  def create
   @articulo = Articulo.new(articulo_params)
  
-  @articulo.save
-  redirect_to @articulo
-end
+    if @articulo.save
+      redirect_to @articulo
+    else
+      render 'new'
+    end
+  end
  
 private
   def articulo_params
