@@ -4,10 +4,10 @@ class CreateComentarios < ActiveRecord::Migration
       t.string :comentarista
       t.text :contendio
       
-      t.references :articulo, index: true
+      t.references :articulo, foreign_key: true
 
       t.timestamps
     end
-    add_foregin_key :comentarios,:articulos
+    
   end
 end

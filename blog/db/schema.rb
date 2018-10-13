@@ -11,11 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181006014343) do
+ActiveRecord::Schema.define(version: 20181011020227) do
 
   create_table "articulos", force: true do |t|
     t.string   "titular"
     t.text     "contenido"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "comentarios", force: true do |t|
+    t.string   "comentarista"
+    t.text     "contendio"
+    t.integer  "articulo_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
