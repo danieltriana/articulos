@@ -2,7 +2,7 @@ class CreateComentarios < ActiveRecord::Migration
   def change
     create_table :comentarios do |t|
       t.string :comentarista
-      t.text :contendio
+      t.text :contenido
       
       t.references :articulo, foreign_key: true
 

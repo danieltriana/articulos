@@ -1,4 +1,4 @@
-<%= form_for([@articulo, @articulo.comentarios.build]) do |f| %>
+<%= form_for([@articulo, @articulo.comentarios.build],local: true) do |f| %>
   <p>
     <%= f.label :comentarista %><br>
     <%= f.text_field :comentarista %>

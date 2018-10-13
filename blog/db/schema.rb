@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20181011020227) do
 
   create_table "comentarios", force: true do |t|
     t.string   "comentarista"
-    t.text     "contendio"
+    t.text     "contenido"
     t.integer  "articulo_id"
     t.datetime "created_at"
     t.datetime "updated_at"

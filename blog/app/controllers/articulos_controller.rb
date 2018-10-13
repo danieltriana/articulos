@@ -23,9 +23,9 @@ class ArticulosController < ApplicationController
       render 'new'
     end
   end
- def uptade
+ def update
    @articulo = Articulo.find(params[:id])
-   if @articulo.uptade(articulo_params)
+   if @articulo.update(articulo_params)
      redirect_to @articulo
    else
      render 'edit'
